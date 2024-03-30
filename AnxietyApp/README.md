@@ -1,0 +1,1 @@
+![Örnek Resim](anx.png)
