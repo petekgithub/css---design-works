@@ -20,11 +20,13 @@ header {
 
 nav {
   position: fixed;
+  right: -100%;
   top: 0;
-  right: -100;
   width: 33%;
   background: white;
   height: 100vh;
+  z-index: 2;
+  transition: right 0.5s ease-in-out;
   padding: 4.6em;
 }
 
@@ -33,12 +35,15 @@ nav {
   height: 3rem;
   cursor: pointer;
 }
-.close-btn {
+
+.open {
+  right: 0%;
+}
+.close {
   cursor: pointer;
   display: block;
-  width: 3rem;
   margin-left: auto;
-  margin-bottom: 6.6rem;
+  margin-bottom: 6.6em;
 }
 
 .navbar {
@@ -102,4 +107,23 @@ a.cart:hover {
   display: flex;
   align-items: center;
   gap: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .menu-btn,
+  .close {
+    display: none;
+  }
+
+  nav {
+    position: unset;
+    height: auto;
+    background: none;
+    padding: 0;
+    width: auto;
+  }
+
+  ul {
+    flex-direction: row;
+  }
 }
